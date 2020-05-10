@@ -1,0 +1,16 @@
+
+add_class("A")
+add_attribute("A", "att", "BOOLEAN")
+add_query("A", "q", <<["b", "BOOLEAN"]>>, "INTEGER")
+
+add_assignment_instruction("A", "q", "att") 
+disjunction
+add_call_chain(<<"b">>)
+conjunction
+less_than
+int_value(2)
+int_value(3)
+add_call_chain(<<"b">>)
+
+generate_java_code
+type_check
